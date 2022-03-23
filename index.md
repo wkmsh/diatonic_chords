@@ -13,3 +13,32 @@
 |  Third  |     |      |       |      |    |      |         |
 |  Fifth  |     |      |       |      |    |      |         |
 | Seventh |     |      |       |      |    |      |         |
+
+<table id="targetTable">
+  <thead>
+    <tr>
+      <td>名前</td>
+      <td>年齢</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>鈴木</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <td>山田</td>
+      <td>18</td>
+    </tr>
+  <tbody>
+</table>
+
+<script>
+  let table = document.getElementById('targetTable');
+
+  for (let row of table.rows) {
+      for(let cell of row.cells){
+         console.log(cell.innerText);
+      }
+  }
+</script>
