@@ -19,7 +19,7 @@
 </div>
 
 <script type="text/javascript">
-  function valueChange(event){
+  function valueChange(event, table){
     console.log('選択されているのは ' + event.currentTarget.value + ' です');
     table.rows[1].cells[0].innerHTML = event.currentTarget.value
   }
@@ -135,10 +135,3 @@
   </tr>
 </tbody>
 </table>
-
-<script type="text/javascript">
-  let table = document.getElementById('targetTable');
-  document.getElementById('targetTable');
-  
-  table.rows[1].cells[0].innerHTML = 'moji'
-</script>
