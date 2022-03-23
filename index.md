@@ -90,7 +90,7 @@
   function valueChange(event){
     console.log('選択されているのは ' + event.currentTarget.value + ' です');
     this.table.rows[1].cells[0].innerHTML = event.currentTarget.value;
-    x = list.indexOf(event.currentTarget.value)
+    x = root.indexOf(event.currentTarget.value)
     console.log(event.currentTarget.value + 'のindexは' + x);
     for (let i = 0; i < 7; i++) {
       j = (i+x)%7
