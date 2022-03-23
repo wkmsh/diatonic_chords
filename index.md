@@ -89,7 +89,7 @@
 <script type="text/javascript">
   function valueChange(event){
     this.table.rows[1].cells[0].innerHTML = event.currentTarget.value;
-    x = root.indexOf(event.currentTarget.value)
+    x = this.root.indexOf(event.currentTarget.value)
     for (let i = 0; i < 7; i++) {
       ix = (i+x)%7;
       this.table.rows[1].cells[i+1].innerHTML = this.root[ix] + this.list[i];
