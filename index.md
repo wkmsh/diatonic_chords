@@ -9,41 +9,45 @@
 | Seventh |     |      |       |      |    |      |         |
 
 <div>
-<label><input type="radio" name="key" value="c" id="radioC">オレンジ</label>
-<label><input type="radio" name="key" value="d" id="radioD">オレンジ</label>
-<label><input type="radio" name="key" value="e" id="radioE">オレンジ</label>
-<label><input type="radio" name="key" value="f" id="radioF">オレンジ</label>
-<label><input type="radio" name="key" value="g" id="radioG">オレンジ</label>
-<label><input type="radio" name="key" value="a" id="radioA">オレンジ</label>
-<label><input type="radio" name="key" value="b" id="radioB">オレンジ</label>
+<label><input type="radio" name="key" value="c" id="radioC">C</label>
+<label><input type="radio" name="key" value="d" id="radioD">D</label>
+<label><input type="radio" name="key" value="e" id="radioE">E</label>
+<label><input type="radio" name="key" value="f" id="radioF">F</label>
+<label><input type="radio" name="key" value="g" id="radioG">G</label>
+<label><input type="radio" name="key" value="a" id="radioA">A</label>
+<label><input type="radio" name="key" value="b" id="radioB">B</label>
 </div>
 
-<script>
-function valueChange(event){
-  console.log('選択されているのは ' + event.currentTarget.value + ' です');
-}
+<script type="text/javascript">
+  function valueChange(event){
+    console.log('選択されているのは ' + event.currentTarget.value + ' です');
+    table.rows[1].cells[0].innerHTML = event.currentTarget.value
+  }
 
-let radioC = document.getElementById('radioC');
-radioC.checked = true;
-radioC.addEventListener('change', valueChange);
+  let table = document.getElementById('targetTable');
+  document.getElementById('targetTable');
 
-let radioD = document.getElementById('radioD');
-radioD.addEventListener('change', valueChange);
+  let radioC = document.getElementById('radioC');
+  radioC.checked = true;
+  radioC.addEventListener('change', valueChange);
 
-let radioE = document.getElementById('radioE');
-radioE.addEventListener('change', valueChange);
-  
-let radioF = document.getElementById('radioF');
-radioF.addEventListener('change', valueChange);
-  
-let radioG = document.getElementById('radioG');
-radioG.addEventListener('change', valueChange);
-  
-let radioA = document.getElementById('radioA');
-radioA.addEventListener('change', valueChange);
-  
-let radioB = document.getElementById('radioB');
-radioB.addEventListener('change', valueChange);
+  let radioD = document.getElementById('radioD');
+  radioD.addEventListener('change', valueChange);
+
+  let radioE = document.getElementById('radioE');
+  radioE.addEventListener('change', valueChange);
+
+  let radioF = document.getElementById('radioF');
+  radioF.addEventListener('change', valueChange);
+
+  let radioG = document.getElementById('radioG');
+  radioG.addEventListener('change', valueChange);
+
+  let radioA = document.getElementById('radioA');
+  radioA.addEventListener('change', valueChange);
+
+  let radioB = document.getElementById('radioB');
+  radioB.addEventListener('change', valueChange);
 </script>
 
 <div>
