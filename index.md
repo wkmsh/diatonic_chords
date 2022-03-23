@@ -26,7 +26,6 @@
 
   let table = document.getElementById('targetTable');
   document.getElementById('targetTable');
-  table.rows[1].cells[1].innerHTML = 'hoge'
 
   let radioC = document.getElementById('radioC');
   radioC.checked = true;
