@@ -26,6 +26,7 @@
 
   let table = document.getElementById('targetTable');
   document.getElementById('targetTable');
+  table.rows[1].cells[1].innerHTML = 'hoge'
 
   let radioC = document.getElementById('radioC');
   radioC.checked = true;
@@ -49,16 +50,6 @@
   let radioB = document.getElementById('radioB');
   radioB.addEventListener('change', valueChange);
 </script>
-
-<div>
-  <label><input type="radio" name="key" value="c">C</label>
-  <label><input type="radio" name="key" value="d">D</label>
-  <label><input type="radio" name="key" value="e">E</label>
-  <label><input type="radio" name="key" value="f">F</label>
-  <label><input type="radio" name="key" value="g">G</label>
-  <label><input type="radio" name="key" value="a">A</label>
-  <label><input type="radio" name="key" value="b">B</label>
-</div>
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
