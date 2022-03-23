@@ -14,25 +14,6 @@
 |  Fifth  |     |      |       |      |    |      |         |
 | Seventh |     |      |       |      |    |      |         |
 
-<table id="targetTable">
-  <thead>
-    <tr>
-      <td>名前</td>
-      <td>年齢</td>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>鈴木</td>
-      <td>14</td>
-    </tr>
-    <tr>
-      <td>山田</td>
-      <td>18</td>
-    </tr>
-  <tbody>
-</table>
-
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
 .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
@@ -41,7 +22,8 @@
   font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
 </style>
-<table class="tg">
+
+<table class="tg" id="targetTable>
 <thead>
   <tr>
     <th class="tg-c3ow">Key</th>
