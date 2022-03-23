@@ -107,6 +107,7 @@
 
   let table = document.getElementById('targetTable');
   for (let i = 0; i < 7; i++) {
+    table.rows[1].cells[i+1] = 'aaa'
     console.log(hash['C'][i]);
   }
 
