@@ -103,12 +103,12 @@
   const list = ['M7', 'm7', 'm7', 'M7', '7', 'm7', 'm7b5']
 
   let table = document.getElementById('targetTable');
+  for (let i = 0; i < 7; i++) {
+    table.rows[1].cells[i+1].innerHTML = root[i] + list[i];
+  }
 
   let radioC = document.getElementById('radioC');
   radioC.checked = true;
-  for (let i = 0; i < 7; i++) {
-    table.rows[1].cells[i+1].innerHTML = root[i] + this.list[i];
-  }
   radioC.addEventListener('change', {table: table, root: root, list: list, handleEvent: valueChange});
 
   let radioD = document.getElementById('radioD');
