@@ -103,8 +103,8 @@
   console.log(hash['C']);
 
   let table = document.getElementById('targetTable');
-  for (let i = 1; i <= 7; i++) {
-    table.row[1].cells[i+1] = hash['C'][i];
+  for (let i = 0; i < 7; i++) {
+    table.rows[1].cells[i+1] = hash['C'][i];
   }
 
   let radioC = document.getElementById('radioC');
