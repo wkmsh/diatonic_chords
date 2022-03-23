@@ -94,6 +94,7 @@
     console.log(event.currentTarget.value + 'のindexは' + x);
     for (let i = 0; i < 7; i++) {
       j = (i+x)%7
+      console.log(j);
       this.table.rows[1].cells[j+1].innerHTML = this.root[j] + this.list[j];
     }
   }
