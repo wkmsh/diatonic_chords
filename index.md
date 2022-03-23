@@ -92,10 +92,10 @@
     x = root.indexOf(event.currentTarget.value)
     y = tone.indexOf(event.currentTarget.value)
     for (let i = 0; i < 7; i++) {
-      ix = (i+x)%7
+      ix = (i+x)%7;
       this.table.rows[1].cells[i+1].innerHTML = this.root[ix] + this.list[i];
       for (let j = 0; j < 4; j++) {
-        jy = (j+y)%12
+        jy = (j+y)%12;
         table.rows[j+2].cells[i+1].innerHTML = tone[majmin[i][jy]];
       }
     }
@@ -111,11 +111,11 @@
   let radioC = document.getElementById('radioC');
   radioC.checked = true;
   table.rows[1].cells[0].innerHTML = 'C'
-  y = tone.indexOf(event.currentTarget.value)
+  y = tone.indexOf('C');
   for (let i = 0; i < 7; i++) {
     table.rows[1].cells[i+1].innerHTML = root[i] + list[i];
     for (let j = 0; j < 4; j++) {
-      jy = (j+y)%12
+      jy = (j+y)%12;
       table.rows[j+2].cells[i+1].innerHTML = tone[majmin[i][jy]];
     }
   }
