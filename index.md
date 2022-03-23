@@ -24,7 +24,7 @@
   <tbody>
     <tr>
       <td>鈴木</td>
-      <td>13</td>
+      <td>14</td>
     </tr>
     <tr>
       <td>山田</td>
@@ -42,5 +42,5 @@
       }
   }
   
-  table.1.1.innerHTML = 'moji'
+  table.rows[1].cells[1].innerHTML = 'moji'
 </script>
