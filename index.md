@@ -110,6 +110,7 @@
     table.rows[1].cells[i+1] = 'aaa'
     console.log(hash['C'][i]);
   }
+  table.rows[1].cells[1] = 'bbb'
 
   let radioC = document.getElementById('radioC');
   radioC.checked = true;
