@@ -42,5 +42,5 @@
       }
   }
   
-  table.2.2.innerHTML = 'moji'
+  table.1.1.innerHTML = 'moji'
 </script>
