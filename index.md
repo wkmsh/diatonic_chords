@@ -90,6 +90,9 @@
   function valueChange(event){
     console.log('選択されているのは ' + event.currentTarget.value + ' です');
     this.table.rows[1].cells[0].innerHTML = event.currentTarget.value;
+    for (let i = 0; i < 7; i++) {
+      table.rows[1].cells[i+1] = hash[event.currentTarget.value][i];
+    }
   }
   
   const hash = {'C': ['CM7', 'Dm7', 'Em7', 'FM7', 'G7', 'Am7', 'Bm7b5'],
@@ -103,9 +106,6 @@
   console.log(hash['C']);
 
   let table = document.getElementById('targetTable');
-  for (let i = 0; i < 7; i++) {
-    table.rows[1].cells[i+1] = hash['C'][i];
-  }
 
   let radioC = document.getElementById('radioC');
   radioC.checked = true;
