@@ -106,6 +106,9 @@
   console.log(hash['C']);
 
   let table = document.getElementById('targetTable');
+  for (let i = 0; i < 7; i++) {
+    console.log(hash['C'][i]);
+  }
 
   let radioC = document.getElementById('radioC');
   radioC.checked = true;
