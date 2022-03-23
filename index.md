@@ -101,7 +101,6 @@
   
   const root = ['C', 'D', 'E', 'F', 'G', 'A', 'B']
   const list = ['M7', 'm7', 'm7', 'M7', '7', 'm7', 'm7b5']
-  console.log(hash['C']);
 
   let table = document.getElementById('targetTable');
 
