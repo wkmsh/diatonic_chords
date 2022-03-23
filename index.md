@@ -1,11 +1,5 @@
 ## Diatonic Chords
 
-<div>
-  <label><input type="radio" name="key" value="c">C</label>
-  <label><input type="radio" name="key" value="d">D</label>
-  <label><input type="radio" name="key" value="e">E</label>
-</div>
-
 |   Key   | IM7 | iim7 | iiim7 | IVM7 | V7 | vim7 | viim7b5 |
 |:-------:|:---:|:----:|:-----:|:----:|:--:|:----:|:-------:|
 |         |     |      |       |      |    |      |         |
@@ -13,6 +7,41 @@
 |  Third  |     |      |       |      |    |      |         |
 |  Fifth  |     |      |       |      |    |      |         |
 | Seventh |     |      |       |      |    |      |         |
+
+<div>
+<label><input type="radio" name="fruit" value="orange" id="fruitRadio1">
+オレンジ</label>
+<label><input type="radio" name="fruit" value="lemon" id="fruitRadio2">
+レモン</label>
+<label><input type="radio" name="fruit" value="strawberry" id="fruitRadio3">
+ストロベリー</label>
+</div>
+
+<script>
+function valueChange(event){
+  console.log('選択されているのは ' + event.currentTarget.value + ' です');
+}
+
+let fruitRadio1 = document.getElementById('fruitRadio1');
+fruitRadio1.addEventListener('change', valueChange);
+
+let fruitRadio2 = document.getElementById('fruitRadio2');
+fruitRadio2.checked = true;
+fruitRadio2.addEventListener('change', valueChange);
+
+let fruitRadio3 = document.getElementById('fruitRadio3');
+fruitRadio3.addEventListener('change', valueChange);
+</script>
+
+<div>
+  <label><input type="radio" name="key" value="c">C</label>
+  <label><input type="radio" name="key" value="d">D</label>
+  <label><input type="radio" name="key" value="e">E</label>
+  <label><input type="radio" name="key" value="f">F</label>
+  <label><input type="radio" name="key" value="g">G</label>
+  <label><input type="radio" name="key" value="a">A</label>
+  <label><input type="radio" name="key" value="b">B</label>
+</div>
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
@@ -92,12 +121,7 @@
 
 <script type="text/javascript">
   let table = document.getElementById('targetTable');
-
-  for (let row of table.rows) {
-      for(let cell of row.cells){
-         console.log(cell.innerText);
-      }
-  }
+  document.getElementById('targetTable');
   
-  table.rows[1].cells[1].innerHTML = 'moji'
+  table.rows[1].cells[0].innerHTML = 'moji'
 </script>
