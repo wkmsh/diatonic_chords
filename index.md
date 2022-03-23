@@ -26,6 +26,7 @@
   }
 
   let table = document.getElementById('targetTable');
+  console.log('table ' + table);
 
   let radioC = document.getElementById('radioC');
   radioC.checked = true;
