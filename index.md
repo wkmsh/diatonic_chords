@@ -98,6 +98,8 @@
   
   const root = ['C', 'D', 'E', 'F', 'G', 'A', 'B']
   const list = ['M7', 'm7', 'm7', 'M7', '7', 'm7', 'm7b5']
+  const tone = ['C', 'C#-D♭','D', 'D#-E♭','E','F', 'F#-G♭', 'G', 'G#-A♭', 'A', 'A#-B♭', 'B']
+  const majmin = [[0, 4, 7, 11], [0, 3, 7, 10], [0, 3, 7, 10], [0, 4, 7, 11], [0, 4, 7, 10], [0, 3, 7, 10], [0, 3, 6, 10]]
 
   let table = document.getElementById('targetTable');
 
@@ -106,7 +108,9 @@
   table.rows[1].cells[0].innerHTML = 'C'
   for (let i = 0; i < 7; i++) {
     table.rows[1].cells[i+1].innerHTML = root[i] + list[i];
-    table.rows[2].cells[i+1].innerHTML = root[i];
+    for (let j = 0; j < 4; j++) {
+      table.rows[j+2].cells[i+1].innerHTML = majmin[i][j];
+    }
   }
   radioC.addEventListener('change', {table: table, root: root, list: list, handleEvent: valueChange});
 
