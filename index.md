@@ -9,12 +9,13 @@
 | Seventh |     |      |       |      |    |      |         |
 
 <div>
-<label><input type="radio" name="fruit" value="orange" id="fruitRadio1">
-オレンジ</label>
-<label><input type="radio" name="fruit" value="lemon" id="fruitRadio2">
-レモン</label>
-<label><input type="radio" name="fruit" value="strawberry" id="fruitRadio3">
-ストロベリー</label>
+<label><input type="radio" name="key" value="c" id="radioC">オレンジ</label>
+<label><input type="radio" name="key" value="d" id="radioD">オレンジ</label>
+<label><input type="radio" name="key" value="e" id="radioE">オレンジ</label>
+<label><input type="radio" name="key" value="f" id="radioF">オレンジ</label>
+<label><input type="radio" name="key" value="g" id="radioG">オレンジ</label>
+<label><input type="radio" name="key" value="a" id="radioA">オレンジ</label>
+<label><input type="radio" name="key" value="b" id="radioB">オレンジ</label>
 </div>
 
 <script>
@@ -22,15 +23,27 @@ function valueChange(event){
   console.log('選択されているのは ' + event.currentTarget.value + ' です');
 }
 
-let fruitRadio1 = document.getElementById('fruitRadio1');
-fruitRadio1.addEventListener('change', valueChange);
+let radioC = document.getElementById('radioC');
+radioC.checked = true;
+radioC.addEventListener('change', valueChange);
 
-let fruitRadio2 = document.getElementById('fruitRadio2');
-fruitRadio2.checked = true;
-fruitRadio2.addEventListener('change', valueChange);
+let radioD = document.getElementById('radioD');
+radioD.addEventListener('change', valueChange);
 
-let fruitRadio3 = document.getElementById('fruitRadio3');
-fruitRadio3.addEventListener('change', valueChange);
+let radioE = document.getElementById('radioE');
+radioE.addEventListener('change', valueChange);
+  
+let radioF = document.getElementById('radioF');
+radioF.addEventListener('change', valueChange);
+  
+let radioG = document.getElementById('radioG');
+radioG.addEventListener('change', valueChange);
+  
+let radioA = document.getElementById('radioA');
+radioA.addEventListener('change', valueChange);
+  
+let radioB = document.getElementById('radioB');
+radioB.addEventListener('change', valueChange);
 </script>
 
 <div>
