@@ -90,10 +90,10 @@
   function valueChange(event){
     this.table.rows[1].cells[0].innerHTML = event.currentTarget.value;
     x = root.indexOf(event.currentTarget.value)
-    y = tone.indexOf(event.currentTarget.value)
     for (let i = 0; i < 7; i++) {
       ix = (i+x)%7;
       this.table.rows[1].cells[i+1].innerHTML = this.root[ix] + this.list[i];
+      y = tone.indexOf(this.root[ix]);
       for (let j = 0; j < 4; j++) {
         jy = (this.majmin[i][j]+y)%12;
         this.table.rows[j+2].cells[i+1].innerHTML = this.tone[jy];
