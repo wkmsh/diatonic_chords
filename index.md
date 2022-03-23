@@ -91,9 +91,10 @@
     console.log('選択されているのは ' + event.currentTarget.value + ' です');
     this.table.rows[1].cells[0].innerHTML = event.currentTarget.value;
     x = list.indexOf(event.currentTarget.value)
+    console.log(event.currentTarget.value + 'のindexは' + x);
     for (let i = 0; i < 7; i++) {
       j = (i+x)%7
-      this.table.rows[1].cells[j+1].innerHTML = root[j] + list[j];
+      this.table.rows[1].cells[j+1].innerHTML = this.root[j] + this.list[j];
     }
   }
   
@@ -112,7 +113,6 @@
   let table = document.getElementById('targetTable');
   for (let i = 0; i < 7; i++) {
     table.rows[1].cells[i+1].innerHTML = 'aaa'
-    console.log(hash['C'][i]);
   }
 
   let radioC = document.getElementById('radioC');
