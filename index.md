@@ -1,21 +1,13 @@
 ## Diatonic Chords
 
-|   Key   | IM7 | iim7 | iiim7 | IVM7 | V7 | vim7 | viim7b5 |
-|:-------:|:---:|:----:|:-----:|:----:|:--:|:----:|:-------:|
-|         |     |      |       |      |    |      |         |
-|   Root  |     |      |       |      |    |      |         |
-|  Third  |     |      |       |      |    |      |         |
-|  Fifth  |     |      |       |      |    |      |         |
-| Seventh |     |      |       |      |    |      |         |
-
 <div>
-<label><input type="radio" name="key" value="c" id="radioC">C</label>
-<label><input type="radio" name="key" value="d" id="radioD">D</label>
-<label><input type="radio" name="key" value="e" id="radioE">E</label>
-<label><input type="radio" name="key" value="f" id="radioF">F</label>
-<label><input type="radio" name="key" value="g" id="radioG">G</label>
-<label><input type="radio" name="key" value="a" id="radioA">A</label>
-<label><input type="radio" name="key" value="b" id="radioB">B</label>
+  <label><input type="radio" name="key" value="C" id="radioC">C</label>
+  <label><input type="radio" name="key" value="D" id="radioD">D</label>
+  <label><input type="radio" name="key" value="E" id="radioE">E</label>
+  <label><input type="radio" name="key" value="F" id="radioF">F</label>
+  <label><input type="radio" name="key" value="G" id="radioG">G</label>
+  <label><input type="radio" name="key" value="A" id="radioA">A</label>
+  <label><input type="radio" name="key" value="B" id="radioB">B</label>
 </div>
 
 <style type="text/css">
@@ -97,7 +89,6 @@
 <script type="text/javascript">
   function valueChange(event){
     console.log('選択されているのは ' + event.currentTarget.value + ' です');
-    console.log(table);
     this.table.rows[1].cells[0].innerHTML = event.currentTarget.value;
   }
 
@@ -109,20 +100,20 @@
   radioC.addEventListener('change', {table: table, handleEvent: valueChange});
 
   let radioD = document.getElementById('radioD');
-  radioD.addEventListener('change', valueChange);
+  radioD.addEventListener('change', {table: table, handleEvent: valueChange}));
 
   let radioE = document.getElementById('radioE');
-  radioE.addEventListener('change', valueChange);
+  radioE.addEventListener('change', {table: table, handleEvent: valueChange}));
 
   let radioF = document.getElementById('radioF');
-  radioF.addEventListener('change', valueChange);
+  radioF.addEventListener('change', {table: table, handleEvent: valueChange}));
 
   let radioG = document.getElementById('radioG');
-  radioG.addEventListener('change', valueChange);
+  radioG.addEventListener('change', {table: table, handleEvent: valueChange}));
 
   let radioA = document.getElementById('radioA');
-  radioA.addEventListener('change', valueChange);
+  radioA.addEventListener('change', {table: table, handleEvent: valueChange}));
 
   let radioB = document.getElementById('radioB');
-  radioB.addEventListener('change', valueChange);
+  radioB.addEventListener('change', {table: table, handleEvent: valueChange}));
 </script>
