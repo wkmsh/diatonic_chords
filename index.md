@@ -100,20 +100,20 @@
   radioC.addEventListener('change', {table: table, handleEvent: valueChange});
 
   let radioD = document.getElementById('radioD');
-  radioD.addEventListener('change', {table: table, handleEvent: valueChange}));
+  radioD.addEventListener('change', {table: table, handleEvent: valueChange});
 
   let radioE = document.getElementById('radioE');
-  radioE.addEventListener('change', {table: table, handleEvent: valueChange}));
+  radioE.addEventListener('change', {table: table, handleEvent: valueChange});
 
   let radioF = document.getElementById('radioF');
-  radioF.addEventListener('change', {table: table, handleEvent: valueChange}));
+  radioF.addEventListener('change', {table: table, handleEvent: valueChange});
 
   let radioG = document.getElementById('radioG');
-  radioG.addEventListener('change', {table: table, handleEvent: valueChange}));
+  radioG.addEventListener('change', {table: table, handleEvent: valueChange});
 
   let radioA = document.getElementById('radioA');
-  radioA.addEventListener('change', {table: table, handleEvent: valueChange}));
+  radioA.addEventListener('change', {table: table, handleEvent: valueChange});
 
   let radioB = document.getElementById('radioB');
-  radioB.addEventListener('change', {table: table, handleEvent: valueChange}));
+  radioB.addEventListener('change', {table: table, handleEvent: valueChange});
 </script>
