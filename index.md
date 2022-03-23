@@ -19,9 +19,9 @@
 </div>
 
 <script type="text/javascript">
-  function valueChange(event, table){
+  function valueChange(event){
     console.log('選択されているのは ' + event.currentTarget.value + ' です');
-    table.rows[1].cells[0].innerHTML = event.currentTarget.value
+    this.table.rows[1].cells[0].innerHTML = event.currentTarget.value
   }
 
   let table = document.getElementById('targetTable');
@@ -29,7 +29,7 @@
 
   let radioC = document.getElementById('radioC');
   radioC.checked = true;
-  radioC.addEventListener('change', valueChange);
+  radioC.addEventListener('change', {table: table, handleEvent: valueChange});
 
   let radioD = document.getElementById('radioD');
   radioD.addEventListener('change', valueChange);
