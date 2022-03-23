@@ -24,7 +24,7 @@
   <tbody>
     <tr>
       <td>鈴木</td>
-      <td>12</td>
+      <td>13</td>
     </tr>
     <tr>
       <td>山田</td>
@@ -33,7 +33,7 @@
   <tbody>
 </table>
 
-<script>
+<script type="text/javascript">
   let table = document.getElementById('targetTable');
 
   for (let row of table.rows) {
@@ -42,5 +42,5 @@
       }
   }
   
-  table.2.2.innerText = 'moji'
+  table.2.2.innerHTML = 'moji'
 </script>
