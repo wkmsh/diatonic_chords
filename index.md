@@ -21,7 +21,8 @@
 <script type="text/javascript">
   function valueChange(event){
     console.log('選択されているのは ' + event.currentTarget.value + ' です');
-    this.table.rows[1].cells[0].innerHTML = event.currentTarget.value
+    console.log(table);
+    this.table.rows[1].cells[0].innerHTML = event.currentTarget.value;
   }
 
   let table = document.getElementById('targetTable');
