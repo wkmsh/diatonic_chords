@@ -111,10 +111,12 @@
   let radioC = document.getElementById('radioC');
   radioC.checked = true;
   table.rows[1].cells[0].innerHTML = 'C'
+  y = tone.indexOf(event.currentTarget.value)
   for (let i = 0; i < 7; i++) {
     table.rows[1].cells[i+1].innerHTML = root[i] + list[i];
     for (let j = 0; j < 4; j++) {
-      table.rows[j+2].cells[i+1].innerHTML = tone[majmin[i][j]];
+      jy = (j+y)%12
+      table.rows[j+2].cells[i+1].innerHTML = tone[majmin[i][jy]];
     }
   }
   radioC.addEventListener('change', {table: table, root: root, list: list, handleEvent: valueChange});
