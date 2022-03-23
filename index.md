@@ -91,7 +91,7 @@
     console.log('選択されているのは ' + event.currentTarget.value + ' です');
     this.table.rows[1].cells[0].innerHTML = event.currentTarget.value;
     for (let i = 0; i < 7; i++) {
-      table.rows[1].cells[i+1] = hash[event.currentTarget.value][i];
+      this.table.rows[1].cells[i+1].innerHTML = hash[event.currentTarget.value][i];
     }
   }
   
@@ -107,31 +107,29 @@
 
   let table = document.getElementById('targetTable');
   for (let i = 0; i < 7; i++) {
-    table.rows[1].cells[i+1] = 'aaa'
+    table.rows[1].cells[i+1].innerHTML = 'aaa'
     console.log(hash['C'][i]);
   }
-  console.log(table);
-  table.rows[1].cells[1] = 'bbb'
 
   let radioC = document.getElementById('radioC');
   radioC.checked = true;
-  radioC.addEventListener('change', {table: table, handleEvent: valueChange});
+  radioC.addEventListener('change', {table: table, hash: hash, handleEvent: valueChange});
 
   let radioD = document.getElementById('radioD');
-  radioD.addEventListener('change', {table: table, handleEvent: valueChange});
+  radioD.addEventListener('change', {table: table, hash: hash, handleEvent: valueChange});
 
   let radioE = document.getElementById('radioE');
-  radioE.addEventListener('change', {table: table, handleEvent: valueChange});
+  radioE.addEventListener('change', {table: table, hash: hash, handleEvent: valueChange});
 
   let radioF = document.getElementById('radioF');
-  radioF.addEventListener('change', {table: table, handleEvent: valueChange});
+  radioF.addEventListener('change', {table: table, hash: hash, handleEvent: valueChange});
 
   let radioG = document.getElementById('radioG');
-  radioG.addEventListener('change', {table: table, handleEvent: valueChange});
+  radioG.addEventListener('change', {table: table, hash: hash, handleEvent: valueChange});
 
   let radioA = document.getElementById('radioA');
-  radioA.addEventListener('change', {table: table, handleEvent: valueChange});
+  radioA.addEventListener('change', {table: table, hash: hash, handleEvent: valueChange});
 
   let radioB = document.getElementById('radioB');
-  radioB.addEventListener('change', {table: table, handleEvent: valueChange});
+  radioB.addEventListener('change', {table: table, hash: hash, handleEvent: valueChange});
 </script>
