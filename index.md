@@ -95,46 +95,38 @@
     for (let i = 0; i < 7; i++) {
       j = (i+x)%7
       console.log(j);
-      this.table.rows[1].cells[i+1].innerHTML = this.root[j] + this.list[j];
+      this.table.rows[1].cells[i+1].innerHTML = this.root[j] + this.list[i];
     }
   }
   
-  const hash = {'C': ['CM7', 'Dm7', 'Em7', 'FM7', 'G7', 'Am7', 'Bm7b5'],
-                'D': ['DM7', 'Dm7', 'Em7', 'FM7', 'G7', 'Am7', 'Bm7b5'],
-                'E': ['EM7', 'Dm7', 'Em7', 'FM7', 'G7', 'Am7', 'Bm7b5'],
-                'F': ['FM7', 'Dm7', 'Em7', 'FM7', 'G7', 'Am7', 'Bm7b5'],
-                'G': ['GM7', 'Dm7', 'Em7', 'FM7', 'G7', 'Am7', 'Bm7b5'],
-                'A': ['AM7', 'Dm7', 'Em7', 'FM7', 'G7', 'Am7', 'Bm7b5'],
-                'B': ['BM7', 'Dm7', 'Em7', 'FM7', 'G7', 'Am7', 'Bm7b5'],
-                };
   const root = ['C', 'D', 'E', 'F', 'G', 'A', 'B']
   const list = ['M7', 'm7', 'm7', 'M7', '7', 'm7', 'm7b5']
   console.log(hash['C']);
 
   let table = document.getElementById('targetTable');
-  for (let i = 0; i < 7; i++) {
-    table.rows[1].cells[i+1].innerHTML = 'aaa'
-  }
 
   let radioC = document.getElementById('radioC');
   radioC.checked = true;
-  radioC.addEventListener('change', {table: table, hash: hash, root: root, list: list, handleEvent: valueChange});
+  for (let i = 0; i < 7; i++) {
+    table.rows[1].cells[i+1].innerHTML = root[i] + this.list[i];
+  }
+  radioC.addEventListener('change', {table: table, root: root, list: list, handleEvent: valueChange});
 
   let radioD = document.getElementById('radioD');
-  radioD.addEventListener('change', {table: table, hash: hash, root: root, list: list, handleEvent: valueChange});
+  radioD.addEventListener('change', {table: table, root: root, list: list, handleEvent: valueChange});
 
   let radioE = document.getElementById('radioE');
-  radioE.addEventListener('change', {table: table, hash: hash, root: root, list: list, handleEvent: valueChange});
+  radioE.addEventListener('change', {table: table, root: root, list: list, handleEvent: valueChange});
 
   let radioF = document.getElementById('radioF');
-  radioF.addEventListener('change', {table: table, hash: hash, root: root, list: list, handleEvent: valueChange});
+  radioF.addEventListener('change', {table: table, root: root, list: list, handleEvent: valueChange});
 
   let radioG = document.getElementById('radioG');
-  radioG.addEventListener('change', {table: table, hash: hash, root: root, list: list, handleEvent: valueChange});
+  radioG.addEventListener('change', {table: table, root: root, list: list, handleEvent: valueChange});
 
   let radioA = document.getElementById('radioA');
-  radioA.addEventListener('change', {table: table, hash: hash, root: root, list: list, handleEvent: valueChange});
+  radioA.addEventListener('change', {table: table, root: root, list: list, handleEvent: valueChange});
 
   let radioB = document.getElementById('radioB');
-  radioB.addEventListener('change', {table: table, hash: hash, root: root, list: list, handleEvent: valueChange});
+  radioB.addEventListener('change', {table: table, root: root, list: list, handleEvent: valueChange});
 </script>
