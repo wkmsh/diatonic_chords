@@ -88,16 +88,16 @@
 
 <script type="text/javascript">
   function valueChange(event){
-    const target = event.currentTarget;
-    target.table.rows[1].cells[0].innerHTML = target.value;
-    x = root.indexOf(target.value)
+    const value = event.currentTarget.value;
+    table.rows[1].cells[0].innerHTML = value;
+    x = root.indexOf(value)
     for (let i = 0; i < 7; i++) {
       ix = (i+x)%7;
-      target.table.rows[1].cells[i+1].innerHTML = target.root[ix] + this.list[i];
-      y = target.tone.indexOf(target.root[ix]);
+      table.rows[1].cells[i+1].innerHTML = root[ix] + this.list[i];
+      y = tone.indexOf(root[ix]);
       for (let j = 0; j < 4; j++) {
-        jy = (target.majmin[i][j]+y)%12;
-        target.table.rows[j+2].cells[i+1].innerHTML = target.tone[jy];
+        jy = (majmin[i][j]+y)%12;
+        table.rows[j+2].cells[i+1].innerHTML = tone[jy];
       }
     }
   }
