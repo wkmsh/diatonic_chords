@@ -92,7 +92,7 @@
     this.table.rows[1].cells[0].innerHTML = event.currentTarget.value;
     x = list.indexOf(event.currentTarget.value)
     for (let i = 0; i < 7; i++) {
-      j = (i+x)%8
+      j = (i+x)%7
       this.table.rows[1].cells[j+1].innerHTML = root[j] + list[j];
     }
   }
