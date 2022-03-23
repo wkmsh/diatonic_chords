@@ -95,8 +95,8 @@
       ix = (i+x)%7;
       this.table.rows[1].cells[i+1].innerHTML = this.root[ix] + this.list[i];
       for (let j = 0; j < 4; j++) {
-        jy = (j+y)%12;
-        table.rows[j+2].cells[i+1].innerHTML = tone[majmin[i][jy]];
+        jy = (this.majmin[i][j]+y)%12;
+        this.table.rows[j+2].cells[i+1].innerHTML = this.tone[jy];
       }
     }
   }
@@ -115,27 +115,27 @@
   for (let i = 0; i < 7; i++) {
     table.rows[1].cells[i+1].innerHTML = root[i] + list[i];
     for (let j = 0; j < 4; j++) {
-      jy = (j+y)%12;
-      table.rows[j+2].cells[i+1].innerHTML = tone[majmin[i][jy]];
+      jy = (majmin[i][j]+y)%12;
+      table.rows[j+2].cells[i+1].innerHTML = tone[jy];
     }
   }
-  radioC.addEventListener('change', {table: table, root: root, list: list, handleEvent: valueChange});
+  radioC.addEventListener('change', {table: table, root: root, list: list, majmin: majmin, handleEvent: valueChange});
 
   let radioD = document.getElementById('radioD');
-  radioD.addEventListener('change', {table: table, root: root, list: list, handleEvent: valueChange});
+  radioD.addEventListener('change', {table: table, root: root, list: list, majmin: majmin, handleEvent: valueChange});
 
   let radioE = document.getElementById('radioE');
-  radioE.addEventListener('change', {table: table, root: root, list: list, handleEvent: valueChange});
+  radioE.addEventListener('change', {table: table, root: root, list: list, majmin: majmin, handleEvent: valueChange});
 
   let radioF = document.getElementById('radioF');
-  radioF.addEventListener('change', {table: table, root: root, list: list, handleEvent: valueChange});
+  radioF.addEventListener('change', {table: table, root: root, list: list, majmin: majmin, handleEvent: valueChange});
 
   let radioG = document.getElementById('radioG');
-  radioG.addEventListener('change', {table: table, root: root, list: list, handleEvent: valueChange});
+  radioG.addEventListener('change', {table: table, root: root, list: list, majmin: majmin, handleEvent: valueChange});
 
   let radioA = document.getElementById('radioA');
-  radioA.addEventListener('change', {table: table, root: root, list: list, handleEvent: valueChange});
+  radioA.addEventListener('change', {table: table, root: root, list: list, majmin: majmin, handleEvent: valueChange});
 
   let radioB = document.getElementById('radioB');
-  radioB.addEventListener('change', {table: table, root: root, list: list, handleEvent: valueChange});
+  radioB.addEventListener('change', {table: table, root: root, list: list, majmin: majmin, handleEvent: valueChange});
 </script>
