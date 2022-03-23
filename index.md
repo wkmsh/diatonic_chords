@@ -23,7 +23,7 @@
 .tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
 </style>
 
-<table class="tg" id="targetTable>
+<table class="tg" id="targetTable">
 <thead>
   <tr>
     <th class="tg-c3ow">Key</th>
